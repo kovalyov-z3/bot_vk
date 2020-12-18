@@ -17,7 +17,8 @@ def what_weather():
     weather_parameters = {
         'format': 2,
         'M': '',
-        
+        'm': '',
+	'2': '',
     }
     try:
        response = requests.get(url, params = weather_parameters)
