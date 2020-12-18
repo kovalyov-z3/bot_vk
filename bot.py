@@ -64,13 +64,13 @@ for event in longpoll.listen():
     if event.type == VkEventType.MESSAGE_NEW and event.to_me and event.text:
         print(event.text)
         chek = event.user_id in ids
-        if (event.text == "луна"):
+        if (str(event.text).lower() == "луна"):
             write_msg(event.user_id,f'{Moon()}',get_random_id())
         if (event.text == "давление"):
             write_msg(event.user_id,f'{preasure()}',get_random_id())
-        if ((event.text != "погода") and (event.text != 'луна') and (event.text != 'погода')):
+        if ((str(event.text).lower() != "давление") and (str(event.text).lower() != 'луна') and (str(event.text).lower() != 'погода')):
             write_msg(event.user_id,f'Напиши мне: погода, я расскажу, как сейчас в Москве',get_random_id())
-        if (event.text == "погода"):
+        if (str(event.text).lower() == "погода"):
             write_msg(event.user_id,f'Привет, погода в Москве: {what_weather()}',get_random_id())
             ids.append(event.user_id)
         
