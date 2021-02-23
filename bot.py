@@ -1,4 +1,4 @@
-token = 'e44ac6041ea129d9956db18093b768e02c523f8e1f2b07f73f7cae13e34e6b56bcd1cdd8b5bc0938243e1'
+token = '******'
 
 import vk_api
 import random
